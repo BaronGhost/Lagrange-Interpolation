@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lagrange Interpolation</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1 class="title">Lagrange Interpolation</h1>
+    </header>
+
+    <main class="card" role="main">
+      <div class="controls-row">
+        <label class="small-label">
+          Data points
+          <input id="numPoints" type="number" min="1" max="10" value="3" />
+        </label>
+        <button id="generateBtn" class="btn">Generate</button>
+        <button id="sortBtn" class="btn subtle">Sort by x</button>
+      </div>
+
+      <div class="workspace">
+        <section class="panel points-panel" aria-label="Data points panel">
+          <h2 class="panel-title">Points (x, y)</h2>
+          <div id="pointsGrid" class="points-grid"></div>
+        </section>
+
+        <section class="panel query-panel" aria-label="Query panel">
+          <h2 class="panel-title">Evaluate</h2>
+          <label class="full">
+            x (value to evaluate)
+            <input id="queryX" type="number" step="any" placeholder="e.g. 1.5" />
+          </label>
+
+          <div class="actions">
+            <button id="calculateBtn" class="btn primary">Calculate y</button>
+            <button id="clearBtn" class="btn">Clear</button>
+          </div>
+
+          <div id="warnings" class="warnings" aria-live="polite"></div>
+        </section>
+      </div>
+
+      <!-- Result area at bottom -->
+      <div id="resultBox" class="result-box" aria-live="polite">
+        <div id="resultText" class="result-text">Result will appear here.</div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      Files: <strong>index.html</strong>, <strong>styles.css</strong>, <strong>script.js</strong>. Put them in your repo and enable GitHub Pages.
+    </footer>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
